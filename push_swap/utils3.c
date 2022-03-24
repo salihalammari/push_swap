@@ -6,7 +6,7 @@
 /*   By: slammari <slammari@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/17 20:52:58 by slammari          #+#    #+#             */
-/*   Updated: 2022/03/17 20:53:42 by slammari         ###   ########.fr       */
+/*   Updated: 2022/03/20 17:59:30 by slammari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ int	get_min_index(int *arr, int size)
 	return (index);
 }
 
-int	get_next_nb(t_p1 *a, int nb)
+int	get_next_nb(t_stack *a, int nb)
 {
 	int	i;
 	int	j;

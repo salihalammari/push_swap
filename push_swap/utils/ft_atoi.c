@@ -6,12 +6,13 @@
 /*   By: slammari <slammari@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/10 20:29:33 by slammari          #+#    #+#             */
-/*   Updated: 2022/03/11 16:42:20 by slammari         ###   ########.fr       */
+/*   Updated: 2022/03/23 16:50:58 by slammari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "../push_swap.h"
 
-int	ft_atoi(const char *str)
+long	ft_atoi(const char *str)
 {
 	int				i;
 	int				n;

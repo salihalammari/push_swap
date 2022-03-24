@@ -1,51 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: slammari <slammari@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/10 20:30:07 by slammari          #+#    #+#             */
-/*   Updated: 2022/03/23 16:49:32 by slammari         ###   ########.fr       */
+/*   Created: 2022/03/10 20:31:07 by slammari          #+#    #+#             */
+/*   Updated: 2022/03/23 16:46:40 by slammari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void	ft_putstr(char *s)
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
-	int	i;
+	size_t	i;
+	size_t	j;
 
 	i = 0;
-	while (s[i])
-	{
-		write(1, &s[i], 1);
-		i++;
-	}
-}
-
-char	*ft_strchr(char *s, int c)
-{
-	int	i;
-
-	if (s == NULL)
-		return (NULL);
-	i = 0;
-	while (s[i] && s[i] != (char)c)
-		i++;
-	if (s[i] == (char)c)
-		return (&s[i]);
-	return (NULL);
-}
-
-size_t	ft_strlen(const	char *s)
-{
-	int	i;
-
-	i = 0;
-	while (s[i] != '\0')
+	j = 0;
+	while (src[i])
 	{
 		i++;
 	}
+	if (dstsize == 0)
+		return (i);
+	while (j < dstsize - 1 && src[j])
+	{
+		dst[j] = src[j];
+		j++;
+	}
+	dst[j] = '\0';
 	return (i);
 }

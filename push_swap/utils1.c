@@ -6,13 +6,13 @@
 /*   By: slammari <slammari@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/17 20:52:28 by slammari          #+#    #+#             */
-/*   Updated: 2022/03/17 21:05:43 by slammari         ###   ########.fr       */
+/*   Updated: 2022/03/23 18:14:36 by slammari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-t_stack *creat_stack(unsigned int capacity)
+t_stack	*creat_stack(unsigned int capacity)
 {
 	t_stack	*stack;
 
@@ -49,14 +49,14 @@ int	get_index(t_stack *stack, int m)
 	return (i);
 }
 
-int	is_sorted(t_p1 *stack)
+int	is_sorted(t_stack *stack)
 {
 	int	i;
 	int	nb;
 
 	i = 0;
 	nb = stack->arry[i];
-	while (i < stack->top)
+	while (i <= stack->top)
 	{
 		if (nb < stack->arry[i])
 			return (0);

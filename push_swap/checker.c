@@ -6,31 +6,31 @@
 /*   By: slammari <slammari@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/11 18:38:16 by slammari          #+#    #+#             */
-/*   Updated: 2022/03/11 20:43:05 by slammari         ###   ########.fr       */
+/*   Updated: 2022/03/23 18:13:46 by slammari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static  void    ft_error(void)
+static	void	ft_error(void)
 {
-    write(2, "error\n", 6);
-    exit(1);
-}   
-
-static  int ft_strcmp(char *str, char *ptr)
-{
-    int i;
-    
-    i = 0;
-    while(str[i] && ptr[i] && str[i] == ptr[i])
-        i++;
-    return(str[i] - ptr[i]);
+	write(2, "Error\n", 6);
+	exit (1);
 }
 
-static  void    ft_moves(char *s, t_stack *a, t_stack *b)
+static	int	ft_strcmp(char *s, char *p)
 {
-    if (ft_strcmp(s, "sa\n") == 0)
+	int	i;
+
+	i = 0;
+	while (s[i] && p[i] && s[i] == p[i])
+		i++;
+	return (s[i] - p[i]);
+}
+
+static	void	ft_get_moves(char *s, t_stack *a, t_stack *b)
+{
+	if (ft_strcmp(s, "sa\n") == 0)
 		swap(a, 0);
 	else if (ft_strcmp(s, "ra\n") == 0)
 		rotat_stack(a, 0);
@@ -56,11 +56,30 @@ static  void    ft_moves(char *s, t_stack *a, t_stack *b)
 		ft_error();
 }
 
-int main(int ac, char **av)
+int	main(int ac, char **av)
 {
-    s = get_next_line(0);
-    if(s == NULL)
-        write(1, "OK\n", 3);
-    else
-        write(1, "KO\n", 3);
+	int		i;
+	char	**tab;
+	char	*s;
+	t_stack	*a;
+	t_stack	*b;
+
+	tab = push_in_t_stack(ac, av, &i);
+	a = creat_stack(i);
+	b = creat_stack(i);
+	i = i - 1;
+	while (i >= 0)
+		push(a, ft_atoi(tab[i--]));
+	while (1)
+	{
+		s = get_next_line(0);
+		if (s == NULL)
+			break ;
+		ft_get_moves(s, a, b);
+		free(s);
+	}
+	if (is_sorted(a))
+		write(1, "OK\n", 3);
+	else
+		write(1, "KO\n", 3);
 }

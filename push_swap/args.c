@@ -6,7 +6,7 @@
 /*   By: slammari <slammari@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/06 18:29:02 by slammari          #+#    #+#             */
-/*   Updated: 2022/03/16 20:12:13 by slammari         ###   ########.fr       */
+/*   Updated: 2022/03/23 17:04:41 by slammari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ static	int	check_tab(char **tab)
 		{
 			if (tab[i][j] == '-' || tab[i][j] == '+')
 				j++;
-			if (!ft_isdigit(tab[i][j]) || is_double(t) == 0
+			if (!ft_isdigit(tab[i][j]) || is_double(tab) == 0
 				|| ft_atoi(&tab[i][j]) < -2147483648
 				|| ft_atoi(&tab[i][j]) > 2147483647)
 				return (0);

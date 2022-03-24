@@ -6,7 +6,7 @@
 /*   By: slammari <slammari@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/16 14:49:08 by slammari          #+#    #+#             */
-/*   Updated: 2022/03/17 19:36:23 by slammari         ###   ########.fr       */
+/*   Updated: 2022/03/23 17:55:57 by slammari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int	main(int ac, char **av)
 	count = i;
 	a = creat_stack(i);
 	b = creat_stack(i);
-	i = i - 1;	
+	i = i - 1;
 	while (i >= 0)
 		push(a, ft_atoi(tab[i--]));
 	if (count == 1)

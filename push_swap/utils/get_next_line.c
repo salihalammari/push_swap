@@ -6,11 +6,11 @@
 /*   By: slammari <slammari@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/10 19:56:00 by slammari          #+#    #+#             */
-/*   Updated: 2022/03/10 19:56:17 by slammari         ###   ########.fr       */
+/*   Updated: 2022/03/23 16:49:53 by slammari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 char	*ft_strjoi(char *s1, char *s2)
 {

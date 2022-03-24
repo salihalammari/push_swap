@@ -6,11 +6,11 @@
 /*   By: slammari <slammari@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/16 20:10:16 by slammari          #+#    #+#             */
-/*   Updated: 2022/03/17 21:12:46 by slammari         ###   ########.fr       */
+/*   Updated: 2022/03/20 18:37:07 by slammari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"push_swap.h"
+#include "push_swap.h"
 
 int	*push(t_stack *stack, int val)
 {

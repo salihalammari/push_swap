@@ -6,11 +6,11 @@
 /*   By: slammari <slammari@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/10 20:27:16 by slammari          #+#    #+#             */
-/*   Updated: 2022/03/11 18:21:23 by slammari         ###   ########.fr       */
+/*   Updated: 2022/03/23 17:15:34 by slammari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 static int	count_words(const char *str, char sp)
 {
