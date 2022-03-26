@@ -6,7 +6,7 @@
 /*   By: slammari <slammari@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/10 20:29:33 by slammari          #+#    #+#             */
-/*   Updated: 2022/03/23 16:50:58 by slammari         ###   ########.fr       */
+/*   Updated: 2022/03/24 14:55:03 by slammari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ long	ft_atoi(const char *str)
 		if (str[i] == '-')
 			n = -n;
 		i++;
-	}
+	}		
 	while (str[i] >= '0' && str[i] <= '9')
 	{
 		res = res * 10 + (str[i] - '0');
