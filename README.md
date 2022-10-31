@@ -1,6 +1,10 @@
 # push_swap
 1. What to implement
  .A program that sorts input numbers using a data structure consisting of two stacks, A and B, and given instructions.
+ .push_swap is the task of effectively sorting random numbers. For sorting, you must first choose which structure to receive and store the random number in, and I felt the need to organize the data structure here.
+
+
+# Data Structure:
 
    Initially, numbers are inserted in the order they were entered in A, and after sorting, they should be stored in A.
   (The small number should be on the top.)
